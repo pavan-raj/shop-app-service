@@ -1,0 +1,5 @@
+
+*.xml
+*.lst
+target/classes/SQLScript.sql
+target/classes/application.properties
