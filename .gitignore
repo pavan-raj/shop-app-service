@@ -3,3 +3,8 @@
 *.lst
 target/classes/SQLScript.sql
 target/classes/application.properties
+*.class
+target/maven-archiver/pom.properties
+*.txt
+target/shop-0.0.1-SNAPSHOT.jar.original
+target/shop-0.0.1-SNAPSHOT.jar
