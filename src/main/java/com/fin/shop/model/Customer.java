@@ -1,8 +1,6 @@
 package com.fin.shop.model;
 
-import jakarta.annotation.Nonnull;
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 import java.util.Date;
 
 
@@ -10,7 +8,6 @@ import java.util.Date;
 @Table(name = "Customer")
 public class Customer {
     @Id
-    @Nonnull
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +15,7 @@ public class Customer {
     @Column(name = "First_Name")
     private String firstName;
 
-    @Column(name = "Last_Name")
+    @Column(name = "Last_Name", length = 225)
     private String lastName;
 
     @Column(name = "Address")

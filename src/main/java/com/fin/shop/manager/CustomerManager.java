@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CustomerManager {
@@ -18,6 +19,11 @@ public class CustomerManager {
     public List<Customer> getCustomerList(){
         List<Customer> customerList = (List<Customer>) customerRepository.findAll();
         return customerList;
+    }
+
+    public Customer getCustomer(Long id){
+        Optional<Customer> customer =  customerRepository.findById(id);
+        return customer.get();
     }
 
     public Customer addCustomer(CustomerRequest customerRequest){
